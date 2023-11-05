@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="SonnetTest" basedir="." default="Test">
+	<property environment="env"/>
+	<property name="DEBUG" value="true" />
+	<property name="VERBOSE" value="true" />
+	<property name="TARGET" value="1.6" />
+	<property name="build.dir" value="bin" />
+	<property name="xms" value="-Xms256m" />
+	<property name="xmx" value="-Xmx1024m" />
+	<property name="src.dir" location="${basedir}/src" />
+	<property name="lib.dir" location="../../AutomationTest/jars"/>
+    <property name="bin.dir" location="${basedir}/bin" />
+	<propertyfile file="automationtest.properties">
+		<entry  key="browser_name" value="${Browser}"/>
+		<entry  key="url" value="${Url}"/>
+	</propertyfile>
+	
+
+	<path id="reference">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<pathelement location="${bin.dir}" />
+	</path>
+	
+	<!--<taskdef resource="testngtasks" classpath="${lib.dir}" />-->
+	
+	<taskdef resource="testngtasks">
+	    <classpath>
+	        <fileset dir="${lib.dir}" includes="**/*.jar" />
+	    </classpath>
+	</taskdef>
+	
+	
+	<target name="Test">
+		<testng outputdir="test-output" suitename="suite1">
+			<classpath refid="reference" />			
+			<xmlfileset dir="${basedir}" includes="testng.xml" />
+		</testng>
+	</target>
+	
+<!--	<target name="Report" depends="load-jars">
+		<tstamp>
+			<format property="current.time" pattern="MM/dd/yyyy hh:mm:ss aa" />
+		</tstamp>
+		<loadproperties srcFile="sonnettest.properties"/>
+		<copy file="${product_logo}"  tofile="${basedir}/SonnetTest-Result/test/logo.png" overwrite="true"/>
+	    <delete>
+	    	<fileset dir="SonnetTest-Result/archive" includes="**/*.html"/>
+	    </delete>
+	    <junitreport todir="${basedir}/SonnetTest-Result">
+	    	<fileset dir="${xml_file_location}">
+	        	<include name="TEST-*.xml" />
+	        </fileset>             
+	        <report styledir="SonnetTest-Result/test/junitreport" format="frames" todir="${basedir}/SonnetTest-Result">
+				<param name="URL" expression="${url}"/>
+				<param name="BrowserName" expression="${browser_name}"/>
+				<param name="BrowserVersion" expression="${browser_version}"/>
+				<param name="ExecutedOn" expression="${current.time}"/>
+				<param name="Product_Logo" expression="../test/logo.png"/>
+			</report>
+		</junitreport>
+		
+		<junitpdfreport todir="${basedir}/SonnetTest-Result" styledir="SonnetTest-Result/test/junitpdfreport/default" reportdir="SonnetTest-Result">
+			<fileset dir="${xml_file_location}">
+				<include name="TEST-*.xml" />
+			</fileset>
+		</junitpdfreport>
+	</target> -->
+	
+
+	
+</project>

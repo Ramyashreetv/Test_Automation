@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [MyTestSuite]">
+  <test parallel="none" name="MyTest(failed)">
+    <classes>
+      <class name="com.test.automation.GUI_Automation">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="postSignUp"/>
+          <include name="signUp"/>
+          <include name="testSetup"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.test.automation.GUI_Automation -->
+    </classes>
+  </test> <!-- MyTest(failed) -->
+</suite> <!-- Failed suite [MyTestSuite] -->

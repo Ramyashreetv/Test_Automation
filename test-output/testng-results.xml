@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-05T18:44:51Z" name="MyTestSuite" finished-at="2023-11-05T18:45:04Z" duration-ms="13003">
+    <groups>
+      <group name="regressiontest">
+        <method signature="GUI_Automation.signUp()[pri:0, instance:com.test.automation.GUI_Automation@31ea9581]" name="signUp" class="com.test.automation.GUI_Automation"/>
+      </group> <!-- regressiontest -->
+      <group name="functionaltest">
+        <method signature="GUI_Automation.signUp()[pri:0, instance:com.test.automation.GUI_Automation@31ea9581]" name="signUp" class="com.test.automation.GUI_Automation"/>
+      </group> <!-- functionaltest -->
+    </groups>
+    <test started-at="2023-11-05T18:44:51Z" name="MyTest" finished-at="2023-11-05T18:45:04Z" duration-ms="13003">
+      <class name="com.test.automation.GUI_Automation">
+        <test-method is-config="true" signature="testSetup()[pri:0, instance:com.test.automation.GUI_Automation@31ea9581]" started-at="2023-11-06T00:14:51Z" name="testSetup" finished-at="2023-11-06T00:14:53Z" duration-ms="1826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetup -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.test.automation.GUI_Automation@31ea9581]" started-at="2023-11-06T00:14:53Z" name="openBrowser" finished-at="2023-11-06T00:14:59Z" duration-ms="5934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="signUp()[pri:0, instance:com.test.automation.GUI_Automation@31ea9581]" started-at="2023-11-06T00:14:59Z" name="signUp" description="This method validates the sign up functionality" finished-at="2023-11-06T00:15:03Z" duration-ms="4518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUp -->
+        <test-method is-config="true" signature="postSignUp()[pri:0, instance:com.test.automation.GUI_Automation@31ea9581]" started-at="2023-11-06T00:15:03Z" name="postSignUp" finished-at="2023-11-06T00:15:03Z" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postSignUp -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.test.automation.GUI_Automation@31ea9581]" started-at="2023-11-06T00:15:03Z" name="afterClass" finished-at="2023-11-06T00:15:04Z" duration-ms="709" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.test.automation.GUI_Automation -->
+    </test> <!-- MyTest -->
+  </suite> <!-- MyTestSuite -->
+</testng-results>
